@@ -1,0 +1,35 @@
+#nav-bar {
+  background-color: black;
+}
+
+#dataPanel {
+  background-color: black;
+}
+
+.person-info {
+  display: inline-block;
+}
+
+.pic {
+  border: 3px solid yellowgreen;
+  margin: 3px;
+  width: 150px;
+  height: 150px;
+}
+
+.name {
+  font-family: Roboto;
+  font-size: 20px;
+  font-weight: normal;
+  text-align: center;
+  color: white;
+}
+
+.modal-content {
+  background-color: #cacaca;
+  color: black;
+}
+
+#search-form {
+  background-color: black;
+}
