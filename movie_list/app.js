@@ -2,14 +2,14 @@ const express = require('express')
 const app = express()
 const port = 3000
 const exphbs = require('express-handlebars')
-const movieList = require('./download.json')
+const movieList = require('./movies.json')
 
 // setting template engine
 app.engine('handlebars', exphbs({ defaultLayout: 'main' }))
 app.set('view engine', 'handlebars')
 app.use(express.static('public'))
 
-//操作變數
+//操作router變數
 app.get('/brunch/:food', (req, res) => {
   res.send(`your brunch order is ${req.params.food}`)
 })
@@ -76,7 +76,7 @@ app.get('/search', (req, res) => {
   const movies = movieList.results.filter(movie => {
     return movie.title.toLowerCase().includes(keyword.toLowerCase())
   })
-  res.render('index', { movies : movies, keyword : keyword})
+  res.render('index', { movies: movies, keyword: keyword })
 })
 
 //顯示單一電影資訊
